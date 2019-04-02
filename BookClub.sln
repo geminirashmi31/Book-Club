@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{A3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{25E97D6D-879D-4BA5-A9D9-66A47CD73065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookAPI", "BookAPI\BookAPI.csproj", "{CA393680-1D34-46A9-8AA3-4F35E0B11E3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookAPI", "BookAPI\BookAPI.csproj", "{CA393680-1D34-46A9-8AA3-4F35E0B11E3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

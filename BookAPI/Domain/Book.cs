@@ -9,9 +9,10 @@ namespace BookAPI.Domain
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public decimal Price { get; set; }
         public string PictureUrl { get; set; }
         public string Description { get; set; }
-        public decimal Rating { get; set; }
+        public int Rating { get; set; }
 
         public int BookGenreId { get; set; }
         public int BookAuthorId { get; set; }
