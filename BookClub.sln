@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{25E97D6D-879
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookAPI", "BookAPI\BookAPI.csproj", "{CA393680-1D34-46A9-8AA3-4F35E0B11E3D}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81267E52-A304-4DCB-9A92-B15CCD77CF51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA393680-1D34-46A9-8AA3-4F35E0B11E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA393680-1D34-46A9-8AA3-4F35E0B11E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA393680-1D34-46A9-8AA3-4F35E0B11E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81267E52-A304-4DCB-9A92-B15CCD77CF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81267E52-A304-4DCB-9A92-B15CCD77CF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81267E52-A304-4DCB-9A92-B15CCD77CF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81267E52-A304-4DCB-9A92-B15CCD77CF51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
