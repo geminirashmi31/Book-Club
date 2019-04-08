@@ -19,7 +19,7 @@
     "BookAPI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/Books/books",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
