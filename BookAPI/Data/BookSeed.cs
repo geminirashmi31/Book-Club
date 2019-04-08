@@ -15,16 +15,18 @@ namespace BookAPI.Data
             if (!context.BookGenres.Any())
             {
                 context.BookGenres.AddRange(GetPreconfiguredBookGenres());
+                context.SaveChanges();
             }
             if (!context.BookAuthors.Any())
             {
                 context.BookAuthors.AddRange(GetPreconfiguredBookAuthors());
+                context.SaveChanges();
             }
             if (!context.Books.Any())
             {
                 context.Books.AddRange(GetPreconfiguredBooks());
-            } 
-            context.SaveChanges();
+                context.SaveChanges();
+            }             
         }
 
         private static IEnumerable<BookGenre> GetPreconfiguredBookGenres()
