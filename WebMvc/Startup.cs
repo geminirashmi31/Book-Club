@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebMvc.Infrastructure;
+using WebMvc.Services;
 
 namespace WebMvc
 {
@@ -22,6 +24,8 @@ namespace WebMvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<IHttpClient, CustomHttpClient>();
+            services.AddSingleton<IBooksService, BooksService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

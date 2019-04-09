@@ -59,10 +59,10 @@
 <section class="esh-catalog-filters">
     <div class="container">
         <form asp-action="Index" asp-controller="Catalog" method="post">
-            <label class="esh-catalog-label" data-title="brand">
+            <label class="esh-catalog-label" data-title="author">
                 <select asp-for="@Model.AuthorsFilterApplied" asp-items="@Model.Authors" class="esh-catalog-filter"></select>
             </label>
-            <label class="esh-catalog-label" data-title="type">
+            <label class="esh-catalog-label" data-title="genre">
                 <select asp-for="@Model.GenresFilterApplied" asp-items="@Model.Genres" class="esh-catalog-filter"></select>
             </label>
             <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg" />
