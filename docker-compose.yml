@@ -1,0 +1,36 @@
+version: '3.4'
+
+networks:
+  frontend:
+  backend:
+
+services:
+  bookapi:
+    image: ${DOCKER_REGISTRY-}bookapi
+    build:
+      context: .
+      dockerfile: BookAPI/Dockerfile
+    environment:
+       DatabaseServer: bookdb
+       DatabaseName: BookDb
+       DatabaseUser: sa
+       DatabaseUserPassword: BookApi(!)
+    container_name: bookapi
+    ports:
+       - "6001:80"
+    networks:
+       - backend
+       - frontend
+    depends_on:
+       - mssqlserver
+
+  mssqlserver:
+    image: "microsoft/mssql-server-linux:latest"
+    environment:
+        ACCEPT_EULA: Y
+        SA_PASSWORD: BookApi(!)
+    container_name: bookdb
+    ports:
+        - "7016:1433"
+    networks:
+        - backend

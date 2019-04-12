@@ -28,6 +28,7 @@ namespace BookAPI
             services.AddDbContext<Data.BookContext>(
                 options => options.UseSqlServer(Configuration["ConnectionString"])
                 );
+            Console.WriteLine(connectionString);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
