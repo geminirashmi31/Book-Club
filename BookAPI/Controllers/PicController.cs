@@ -25,7 +25,7 @@ namespace BookAPI.Controllers
             var webRoot = _env.WebRootPath;
             var path = Path.Combine(webRoot + "/Pics/", "books-" + id + ".jpg");
             var buffer = System.IO.File.ReadAllBytes(path);
-            return File(buffer, "image/jpg");
+            return File(buffer, "image/jpeg");
         }
 
     }
