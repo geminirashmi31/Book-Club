@@ -36,7 +36,7 @@ namespace WebMvc.Services
                 }
             };
             //data type is string we are parsing it into array of Json objects
-            var authors = JArray.Parse(dataString);
+            JArray authors = JArray.Parse(dataString);
             foreach (var author in authors)
             {
                 items.Add(
