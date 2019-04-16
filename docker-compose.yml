@@ -52,7 +52,7 @@ services:
      environment: 
        ASPNETCORE_ENVIRONMENT: Development 
        BooksUrl: http://books
-       IdentityUrl: http://172.17.53.161:5020
+       IdentityUrl: http://172.17.76.49:5020
        CallBackUrl: http://localhost:5200
      container_name: web
      ports:
