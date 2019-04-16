@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookAPI", "BookAPI\BookAPI.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMvc", "WebMvc\WebMvc.csproj", "{E87FF1A4-F26E-4145-AFAB-FF171329BFCA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenServiceApi", "TokenServiceApi\TokenServiceApi.csproj", "{832373C5-66BF-4865-9CAD-8E5FB92F99EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{E87FF1A4-F26E-4145-AFAB-FF171329BFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E87FF1A4-F26E-4145-AFAB-FF171329BFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E87FF1A4-F26E-4145-AFAB-FF171329BFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{832373C5-66BF-4865-9CAD-8E5FB92F99EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{832373C5-66BF-4865-9CAD-8E5FB92F99EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{832373C5-66BF-4865-9CAD-8E5FB92F99EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{832373C5-66BF-4865-9CAD-8E5FB92F99EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{25E97D6D-879D-4BA5-A9D9-66A47CD73065} = {EC34A1D1-60A4-4932-BF1E-C3209F958557}
 		{CA393680-1D34-46A9-8AA3-4F35E0B11E3D} = {A317FD99-E84D-4357-99A7-895BB59739A5}
 		{E87FF1A4-F26E-4145-AFAB-FF171329BFCA} = {25E97D6D-879D-4BA5-A9D9-66A47CD73065}
+		{832373C5-66BF-4865-9CAD-8E5FB92F99EB} = {A317FD99-E84D-4357-99A7-895BB59739A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3174FF39-80B0-4F5A-954A-58E3DC08F9B1}

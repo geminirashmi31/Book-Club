@@ -10,6 +10,7 @@ using System.Diagnostics;
 
 namespace WebMvc.Controllers
 {
+    //every action in this controller needs to be authorized
     [Authorize]
     public class AccountController : Controller
     {

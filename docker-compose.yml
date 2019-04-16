@@ -15,6 +15,7 @@ services:
        DatabaseName: BookDb
        DatabaseUser: sa
        DatabaseUserPassword: BookApi(!)
+       ExternalBooksBaseUrl: http://localhost:6001
     container_name: bookapi
     ports:
        - "6001:80"
@@ -23,7 +24,45 @@ services:
        - frontend
     depends_on:
        - mssqlserver
+ 
+  tokenserver:
+    build:
+      context: .
+      dockerfile: TokenServiceApi/Dockerfile
+    environment:
+       ASPNETCORE_ENVIRONMENT: Development
+       MvcClient: http://localhost:5200
+       DatabaseServer: bookdb
+       DatabaseName: BookDb
+       DatabaseUser: sa
+       DatabaseUserPassword: BookApi(!)
+    container_name: tokenserviceapi
+    ports:
+       - "5020:80"
+    networks:
+       - backend
+       - frontend
+    depends_on:
+       - mssqlserver
 
+  webmvc:
+     build: 
+       context: .
+       dockerfile: WebMvc/Dockerfile
+     environment: 
+       ASPNETCORE_ENVIRONMENT: Development 
+       BooksUrl: http://books
+       IdentityUrl: http://172.17.53.161:5020
+       CallBackUrl: http://localhost:5200
+     container_name: web
+     ports:
+       - "5200:80"
+     networks:
+       - frontend 
+     depends_on:
+       - bookapi
+       - tokenserver
+           
   mssqlserver:
     image: "microsoft/mssql-server-linux:latest"
     environment:
