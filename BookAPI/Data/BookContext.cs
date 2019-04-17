@@ -45,7 +45,7 @@ namespace BookAPI.Data
 
             builder.Property(b => b.Description)
                 .IsRequired()
-                .HasMaxLength(500);
+                .HasMaxLength(1000);
 
             builder.Property(b => b.Rating)
                 .IsRequired()
