@@ -15,7 +15,7 @@ services:
        DatabaseName: BookDb
        DatabaseUser: sa
        DatabaseUserPassword: BookApi(!)
-       ExternalBooksBaseUrl: http://localhost:6001
+       ExternalBooksBaseUrl: http://192.168.99.100:6001
     container_name: bookapi
     ports:
        - "6001:80"
@@ -51,7 +51,7 @@ services:
        dockerfile: WebMvc/Dockerfile
      environment: 
        ASPNETCORE_ENVIRONMENT: Development 
-       BooksUrl: http://books
+       BooksUrl: http://bookapi
        IdentityUrl: http://172.17.76.49:5020
        CallBackUrl: http://localhost:5200
      container_name: web

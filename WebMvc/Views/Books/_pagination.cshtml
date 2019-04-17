@@ -6,7 +6,7 @@
             <nav>
                 <a class="esh-pager-item esh-pager-item--navigable @Model.Previous"
                    id="Previous"
-                   asp-controller="Catalog"
+                   asp-controller="Books"
                    asp-action="Index"
                    asp-route-page="@(Model.ActualPage -1)"
                    aria-label="Previous">
@@ -19,7 +19,7 @@
 
                 <a class="esh-pager-item esh-pager-item--navigable @Model.Next"
                    id="Next"
-                   asp-controller="Catalog"
+                   asp-controller="Books"
                    asp-action="Index"
                    asp-route-page="@(Model.ActualPage + 1)"
                    aria-label="Next">

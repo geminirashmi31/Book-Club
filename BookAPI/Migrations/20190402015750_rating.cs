@@ -15,6 +15,14 @@ namespace BookAPI.Migrations
                 nullable: false,
                 oldClrType: typeof(decimal),
                 oldMaxLength: 100);
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Description",
+                table: "Books",
+                maxLength: 1000,
+                nullable: false,
+                oldClrType: typeof(string),
+                oldMaxLength: 100);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -25,6 +33,14 @@ namespace BookAPI.Migrations
                 maxLength: 100,
                 nullable: false,
                 oldClrType: typeof(int),
+                oldMaxLength: 100);
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Description",
+                table: "Books",
+                maxLength: 1000,
+                nullable: false,
+                oldClrType: typeof(string),
                 oldMaxLength: 100);
         }
     }
