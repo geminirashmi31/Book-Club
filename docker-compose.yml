@@ -31,7 +31,7 @@ services:
       dockerfile: TokenServiceApi/Dockerfile
     environment:
        ASPNETCORE_ENVIRONMENT: Development
-       MvcClient: http://localhost:5200
+       MvcClient: http://192.168.99.100:5200
        DatabaseServer: bookdb
        DatabaseName: BookDb
        DatabaseUser: sa
@@ -53,7 +53,7 @@ services:
        ASPNETCORE_ENVIRONMENT: Development 
        BooksUrl: http://bookapi
        IdentityUrl: http://192.168.99.100:5020
-       CallBackUrl: http://localhost
+       CallBackUrl: http://192.168.99.100:5200
      container_name: web
      ports:
        - "5200:80"
