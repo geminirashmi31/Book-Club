@@ -8,8 +8,8 @@ services:
   bookapi:
     image: ${DOCKER_REGISTRY-}bookapi
     build:
-      context: .
-      dockerfile: BookAPI/Dockerfile
+      context: ./BookAPI
+      dockerfile: Dockerfile
     environment:
        DatabaseServer: bookdb
        DatabaseName: BookDb
@@ -27,8 +27,8 @@ services:
  
   tokenserver:
     build:
-      context: .
-      dockerfile: TokenServiceApi/Dockerfile
+      context: ./TokenServiceApi
+      dockerfile: Dockerfile
     environment:
        ASPNETCORE_ENVIRONMENT: Development
        MvcClient: http://localhost:5200
@@ -47,14 +47,14 @@ services:
 
   webmvc:
      build: 
-       context: .
-       dockerfile: WebMvc/Dockerfile
+       context: ./WebMvc
+       dockerfile: Dockerfile
      environment: 
        ASPNETCORE_ENVIRONMENT: Development 
        BooksUrl: http://books
-       IdentityUrl: http://172.17.53.161:5020
+       IdentityUrl: http://10.0.75.1:5020
        CallBackUrl: http://localhost:5200
-     container_name: web
+     container_name: webbooks
      ports:
        - "5200:80"
      networks:
