@@ -24,7 +24,7 @@ namespace BookAPI.Data
             {
                 context.Books.AddRange(GetPreconfiguredBooks());
             } 
-            context.SaveChanges();
+			context.SaveChanges();
         }
 
         private static IEnumerable<BookGenre> GetPreconfiguredBookGenres()

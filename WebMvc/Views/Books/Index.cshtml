@@ -58,7 +58,7 @@
 
 <section class="esh-catalog-filters">
     <div class="container">
-        <form asp-action="Index" asp-controller="Catalog" method="post">
+        <form asp-action="Index" asp-controller="Books" method="post">
             <label class="esh-catalog-label" data-title="author">
                 <select asp-for="@Model.AuthorsFilterApplied" asp-items="@Model.Authors" class="esh-catalog-filter"></select>
             </label>
