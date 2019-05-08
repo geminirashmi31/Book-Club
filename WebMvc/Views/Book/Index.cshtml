@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Books";
+    ViewData["Title"] = "Book";
     @model WebMvc.ViewModels.BookIndexViewModel
 }
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
@@ -57,7 +57,7 @@
 
 <section class="esh-catalog-filters">
     <div class="container">
-        <form asp-action="Index" asp-controller="Catalog" method="post">
+        <form asp-action="Index" asp-controller="Book" method="post">
             <label class="esh-catalog-label" data-title="brand">
                 <select asp-for="@Model.AuthorFilterApplied" asp-items="@Model.Authors" class="esh-catalog-filter"></select>
             </label>

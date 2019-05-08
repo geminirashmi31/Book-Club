@@ -21,7 +21,7 @@ namespace WebMvc.Infrastructure
                     filterQs = $"/genre/{genreQs}/author/{authorQs}";
                 }
 
-                return $"{baseUri}items{filterQs}?pageIndex={page}&pageSize={take}";
+                return $"{baseUri}books{filterQs}?pageIndex={page}&pageSize={take}";
             }
 
             public static string GetAllAuthors(string baseUri)

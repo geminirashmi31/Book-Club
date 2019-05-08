@@ -99,7 +99,7 @@ namespace BookAPI.Controllers
             books.ForEach(
                 b => b.PictureUrl = b.PictureUrl
                     .Replace("http://externalbooksbaseurltobereplaced"
-                        , _config["ExternalCatalogBaseUrl"])
+                        , _config["ExternalBooksBaseUrl"])
             );
             return books;
         }
