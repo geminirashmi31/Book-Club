@@ -7,7 +7,7 @@ namespace WebMvc.Models
 {
     public class BookItem
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Title { get; set; }
         public decimal Price { get; set; }
         public string PictureUrl { get; set; }

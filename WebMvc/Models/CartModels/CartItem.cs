@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CartApi.Model
+namespace WebMvc.Models.CartModels
 {
     public class CartItem
     {
@@ -14,5 +14,6 @@ namespace CartApi.Model
         public decimal OldUnitPrice { get; set; }
         public int Quantity { get; set; }
         public string PictureUrl { get; set; }
+
     }
 }

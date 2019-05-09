@@ -60,7 +60,7 @@ services:
     depends_on:
        - basket.data
        - tokenserver
-
+       - rabbitmq
 
   webmvc:
     build:
@@ -71,6 +71,8 @@ services:
        BookUrl: http://bookapi
        IdentityUrl: http://10.0.0.83:5030
        CallBackUrl: http://localhost:6015
+       CartUrl: http://cart
+       OrderUrl: http://order
     container_name: bookWebShop
     ports:
        - "6015:80"
@@ -79,6 +81,31 @@ services:
     depends_on:
        - bookapi
        - tokenserver
+       - cart
+       - order
+
+  order:
+    image: "books/order"
+    build: 
+      context: .\OrderApi
+      dockerfile: Dockerfile
+    environment:
+       ASPNETCORE_ENVIRONMENT: Development
+       IdentityUrl: http://tokenserver
+       SQLSERVER_HOST: bookdb
+       SA_PASSWORD: BookApi(!)
+       DATABASE: OrdersDb
+    container_name: orderapi
+    ports:
+       - "5600:80"
+    networks:
+        - backend
+        - frontend
+    depends_on:
+        - mssqlserver
+        - tokenserver
+        - rabbitmq
+
 
   mssqlserver:
     image: "microsoft/mssql-server-linux:latest"
@@ -95,4 +122,17 @@ services:
     ports: 
         - "6378:6379"
     networks:
+        - backend
+
+  rabbitmq:
+     image: rabbitmq:3-management
+     container_name: rabbitmq
+     hostname: myrabbitmq
+     ports: 
+        - "15672:15672"
+        - "5672:5672"
+        - "5671:5671"
+     volumes:
+        - ~/rabbitmq:/var/lib/rabbitmq/mnesia
+     networks:
         - backend

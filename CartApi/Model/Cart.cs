@@ -13,7 +13,7 @@ namespace CartApi.Model
         public Cart(string cartId)
         {
             BuyerId = cartId;
-            Items = new List<Model.CartItem>();
+            Items = new List<CartItem>();
         }
     }
 }
