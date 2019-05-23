@@ -34,6 +34,18 @@ namespace BookAPI
             services.AddDbContext<Data.BookContext>(
                 options => options.UseSqlServer(connectionString)
                 );
+
+            services.AddSwaggerGen(options =>
+            {
+                options.DescribeAllEnumsAsStrings();
+                options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+                {
+                    Title = "BookClub Book HTTP API",
+                    Version = "V1",
+                    Description = "BookClub Book HTTP API includes all the information regarding books",
+                    TermsOfService = "Terms of service"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +55,11 @@ namespace BookAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger().UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint($"/swagger/v1/swagger.json", "BookAPI v1");
+            });
 
             app.UseMvc();
         }

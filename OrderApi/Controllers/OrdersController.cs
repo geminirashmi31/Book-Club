@@ -42,7 +42,7 @@ namespace OrderApi.Controllers
 
 
 
-        // POST api/Order
+        // POST api/v1/Orders/new
         [Route("new")]
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.Accepted)]
